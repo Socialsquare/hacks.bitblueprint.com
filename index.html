@@ -30,16 +30,23 @@
 				<input name="entry.1467371391" id="hashtag-reference" type="hidden">
 				<div class="page-header">
 					<h1>Vind et hack!</h1>
-					<h2>Et hack er en 1 uges udviklingssprint med fokus på kerne funktionalitet (værdi 40.000 DKK)</h2>
+					<div class="row">
+						<div class="col-md-9">
+							<h2>Et hack er en 1 uges agilt sprint med fokus på udvikling af kerne funktionalitet.</h2>
+						</div>
+						<div class="col-md-3">
+							<p class="blue-badge">Værdi 40.000kr</p>
+						</div>
+					</div>
 					<p>Du får svar på, om vi arbejder videre med jeres udfordring senest d. 18. august 2014 og en løsning præsenteres for jer i starten af september 2014.</p>
 				</div>
-				<p class="lead">Indsend beskrivelsen af en udfordring I oplever internt i jeres organisation eller i forbindelse med jeres kunder og få muligheden for at vinde et hack.</p>
+				<p class="lead">Indsend beskrivelsen af en udfordring I oplever internt i jeres organisation eller i forbindelse med jeres kunder og få muligheden for at vinde et hack!</p>
 				<label for="description"><p>
 					Beskriv udfordringen I oplever - husk at holde det kortfattet og desuden at komme ind på følgende:
 					<ul>
-						<li>Hvem oplever denne udfordring? <small>Så konkret som muligt - Er det fx Karsten fra IT? Er det kunder der ringer ind?</small></li>
-						<li>Hvor stor er udfordringen? <small>Så konkret som muligt - Estimér hvor store udgifter I oplever at udfordringen koster jer? (Manglende omsætning, spildte mandetimer, etc.)</small></li>
-						<li>Husk at det er en konkurrence! <small>Motivér udfordringen - Det er den største og mest interessante udfordring der vinder!</small></li>
+						<li>Hvem oplever denne udfordring? <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="right" title="Så konkret som muligt - Er det fx Karsten fra IT? Er det kunder der ringer ind?"></span><!--small>Så konkret som muligt - Er det fx Karsten fra IT? Er det kunder der ringer ind?</small--></li>
+						<li>Hvor stor er udfordringen? <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="right" title="Så konkret som muligt - Estimér hvor store udgifter I oplever, at udfordringen koster jer? (Manglende omsætning, spildte mandetimer, etc.)"></span><!--small>Så konkret som muligt - Estimér hvor store udgifter I oplever, at udfordringen koster jer? (Manglende omsætning, spildte mandetimer, etc.)</small--></li>
+						<li>Husk at det er en konkurrence! <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="right" title="Motivér udfordringen - Det er den største og mest interessante udfordring, der vinder!"></span><!--small>Motivér udfordringen - Det er den største og mest interessante udfordring, der vinder!</small--></li>
 					</ul>
 				</p></label>
 				<p><textarea name="entry.1459181871" id="description" rows="6" placeholder="Vores udfordring ..."></textarea></p>
@@ -56,7 +63,7 @@
 					<div class="col-md-6"><input name="entry.73572704" id="email" placeholder="Hvad er din e-mail?"></div>
 					<div class="col-md-6"><input name="entry.1410390889" id="phonenumber" placeholder="Hvad er dit telefonnummer?"></div>
 				</div>
-				<p>Informationen du giver os, vil udelukkende bliver brugt internt til vores ingeniører og vil blive opbevaret fortroligt. Det er udelukkende dig, vi vil opsøge dialog med, såfremt vi har uddybende spørgsmål eller ønsker at overdrage premien.</p>
+				<p>Informationen du giver os vil udelukkende bliver brugt internt til vores ingeniører og vil blive opbevaret fortroligt. Det er udelukkende dig, vi vil opsøge dialog med, såfremt vi har uddybende spørgsmål eller ønsker at overdrage premien.</p>
 				<div class="row">
 					<div class="col-md-12">
 						<input class="btn btn-default" type="submit" value="Indsend udfordringen!">
@@ -165,7 +172,7 @@
 			}
 			if($email.val() == "") {
 				errors.push({
-					text: "Du mangler at din email!",
+					text: "Du mangler at udfylde din email!",
 					$element: $email
 				});
 			}
@@ -192,6 +199,8 @@
 		}
 
 		$(function() {
+			$(".glyphicon").tooltip();
+			
 			$("#description").on('keyup', function(e) {
 				var wordCount = count_words( $(this).val() );
 				$("#desciption-length span").text(MAX_DESCRIPTION_WORDS - wordCount);

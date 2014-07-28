@@ -72,6 +72,11 @@ body {
 	font-family: 'DIN';
 }
 
+h1, h2, .lead, .blue-badge {
+	font-family: 'DIN UltraLight';
+	text-transform: uppercase;
+}
+
 label {
 	font-weight: initial;
 }
@@ -98,6 +103,7 @@ p {
 
 form#challenge .row input {
 	width: 100%;
+	margin-bottom: 0.5em;
 }
 
 form#challenge .row {
@@ -110,6 +116,15 @@ form#challenge .row {
 
 #desciption-length.too-long {
 	color: red;
+}
+
+.blue-badge {
+	background-color: #214ed3;
+	padding: 0.3em 0;
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	width: 100%;
 }
 
 #thanks {
