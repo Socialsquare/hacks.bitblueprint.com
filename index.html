@@ -38,7 +38,7 @@
 				<input name="entry.1467371391" id="hashtag-reference" type="hidden">
 				<div class="page-header">
 					<h1>Vind et hack!</h1>
-					<div class="row">
+					<div class="row hack-bg">
 						<div class="col-md-9">
 							<!--h2>Et hack er en 1 uges agilt sprint med fokus på udvikling af kerne funktionalitet.</h2-->
 							<h2>Vind én gratis uges udvikling af en funktionel prototype!</h2>
@@ -57,11 +57,8 @@
 						<li><strong>Husk at det er en konkurrence!</strong><br/><!--span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Motivér udfordringen - Det er den største og mest interessante udfordring, der vinder!"></span-->Motivér udfordringen - Det er den største og mest interessante udfordring, der vinder!</li>
 					</ul>
 				</p>
-				<div class="row">
-					<div class="col-md-12">
-						<textarea class="form-control" name="entry.1459181871" id="description" rows="6" placeholder="Vores udfordring ..."></textarea>
-						<p class="small" id="desciption-length">Du har <span>200</span> ord tilbage til at beskrive jeres udfordring.</p></div>
-				</div>
+				<textarea class="form-control" name="entry.1459181871" id="description" rows="6" placeholder="Vores udfordring ..."></textarea>
+				<p class="small" id="desciption-length">Du har <span>200</span> ord tilbage til at beskrive jeres udfordring.</p>
 
 				<p>Lidt information om jer</p>
 				<div class="row">
@@ -91,64 +88,76 @@
 				<p>BIT BLUEPRINT er et åbent agilt udviklingshus med fokus på udvikling af digitale produkter og services, der er drevet af fællesskaber.</p>
 				<p>Ingeniørerne i BIT BLUEPRINT er meget tværfaglige og har blandt andet designet og udviklet på løsninger til disse udfordringer:</p>
 				<div class="row">
-					<a class="col-md-6 case" id="rokoko" href="http://rokoko.co/" target="_blank">
-						<span class="image"></span>
-						<!--p class="small">Hardware og software til opsamling af 3D bevægelser,<br/>for ROKOKO Electronics</p-->
-						<h3>Udfordringen</h3>
-						<p>ROKOKO Electronics oplevede et behov for en langt billigere løsning til at opsamle 3D bevægelser, når de lavede realtids animations teater til børn for blandt andre Tivoli.</p>
-						<h3>En digital løsning i hardware & software</h3>
-						<p>I samarbejde med ROKOKO's animatører leverer vi en kedeldragt med accelerometre på samtlige led af kroppen, der leverer den relevante data til Unity 3D ved brug af open source komponenter som Arduino, Raspberry Pi og UDOO boards. Da ROKOKO ønsker at biddrage tilbage til fællesskabet, offentliggøres kildekode der udvikles i projektet, under en open source licens.</p>
-						<p class="centered">&middot; &middot; &middot;</p>
-					</a>
-					<a class="col-md-6 case" id="vm-spil" href="http://www.dr.dk/sporten/fifavm2014/quiz" target="_blank">
-						<span class="image"></span>
-						<!--p class="small">Spiludvikling af årets FIFA VM Quiz,<br/>for DR Medier</p-->
-						<h3>Udfordringen</h3>
-						<p>DR Medier oplevede et behov for en interaktiv og underholdende quiz i forbindelse med deres dækning af VM i fodbold i Brasilien.</p>
-						<h3>Et mobil-orienteret website</h3>
-						<p>Vi genbrugte en teknisk løsning fra et eksisterende open source projekt til at skabe en realtids lyd-quiz, hvor lytteren på tid skulle gætte målchancer blot ved at lytte. Teknologien var en mobil-venlig web applikation skrevet i Node.js realtids frameworket Meteor. Dette projekt kunne kun lade sig gøre indenfor de givne resourcer fordi vi benyttede et eksisterende open source projekt ovenpå et eksisterende open source framework.</p>
-						<p class="centered">&middot; &middot; &middot;</p>
-					</a>
+					<div class="col-md-6 case" id="rokoko">
+						<a href="http://rokoko.co/" target="_blank">
+							<span class="image"></span>
+							<!--p class="small">Hardware og software til opsamling af 3D bevægelser,<br/>for ROKOKO Electronics</p-->
+							<h3>Udfordringen</h3>
+							<p>ROKOKO Electronics oplevede et behov for en langt billigere løsning til at opsamle 3D bevægelser, når de lavede realtids animations teater til børn for blandt andre Tivoli.</p>
+							<h3>En digital løsning i hardware & software</h3>
+							<p>I samarbejde med ROKOKO's animatører leverer vi en kedeldragt med accelerometre på samtlige led af kroppen, der leverer den relevante data til Unity 3D ved brug af open source komponenter som Arduino, Raspberry Pi og UDOO boards. Da ROKOKO ønsker at biddrage tilbage til fællesskabet, offentliggøres kildekode der udvikles i projektet, under en open source licens.</p>
+							<p class="centered">&middot; &middot; &middot;</p>
+						</a>
+					</div>
+					<div class="col-md-6 case" id="vm-spil">
+						<a href="http://www.dr.dk/sporten/fifavm2014/quiz" target="_blank">
+							<span class="image"></span>
+							<!--p class="small">Spiludvikling af årets FIFA VM Quiz,<br/>for DR Medier</p-->
+							<h3>Udfordringen</h3>
+							<p>DR Medier oplevede et behov for en interaktiv og underholdende quiz i forbindelse med deres dækning af VM i fodbold i Brasilien.</p>
+							<h3>Et mobil-orienteret website</h3>
+							<p>Vi genbrugte en teknisk løsning fra et eksisterende open source projekt til at skabe en realtids lyd-quiz, hvor lytteren på tid skulle gætte målchancer blot ved at lytte. Teknologien var en mobil-venlig web applikation skrevet i Node.js realtids frameworket Meteor. Dette projekt kunne kun lade sig gøre indenfor de givne resourcer fordi vi benyttede et eksisterende open source projekt ovenpå et eksisterende open source framework.</p>
+							<p class="centered">&middot; &middot; &middot;</p>
+						</a>
+					</div>
 				</div>
 				<div class="row">
-					<a class="col-md-6 case" id="gcl" href="http://www.globalchangelab.org/" target="_blank">
-						<span class="image"></span>
-						<!--p class="small">Læringsplatform, Global Change Lab,<br/>for Mellemfolkeligt Samvirke</p-->
-						<h3>Udfordringen</h3>
-						<p>Mellemfolkeligt Samvirke oplevede et behov for en online læringsplatform til deres mange frivillige aktivister.</p>
-						<h3>En social læringsplatform</h3>
-						<p>Vi undersøgte markedet og valgte sammen med Mellemfolkeligt Samvirke at starte et open source projekt med fokus på simple opgaver (kaldet bits) der samlet udgør færdigheder (kaldet skills). Platformen har samtidig fokus på at brugerene kan dele deres erfaringer med det de lærer på platformen, således at de kan inspirere hinanden på tværs.</p>
-						<p class="centered">&middot; &middot; &middot;</p>
-					</a>
-					<a class="col-md-6 case" id="dka" href="http://www.danskkulturarv.dk/" target="_blank">
-						<span class="image"></span>
-						<!--p class="small">Tilgængeliggørelse af 100.000+ kulturhistoriske materialer<br/>for DR Arkiv</p-->
-						<h3>Udfordringen</h3>
-						<p>DR Arkiv oplevede et behov for tilgængeliggørelsen af 100.000+ kulturhistoriske materialer fra 10+ samarbejdsinstitutioner.</p>
-						<h3>Et mobil-venligt website</h3>
-						<p>Fordi DR udtrykte et relativt stort behov for redaktionelt at kunne udvælge materialer og skrive uddybende tekster i produktet, valgte vi at basere udviklingen på et af de mest successfulde CMS systemer, nemlig open source systemet Wordpress. Til lagring af og søgning i materialerne benyttes open source collection management servicen CHAOS.</p>
-						<p class="centered">&middot; &middot; &middot;</p>
-					</a>
+					<div class="col-md-6 case" id="gcl">
+						<a href="http://www.globalchangelab.org/" target="_blank">
+							<span class="image"></span>
+							<!--p class="small">Læringsplatform, Global Change Lab,<br/>for Mellemfolkeligt Samvirke</p-->
+							<h3>Udfordringen</h3>
+							<p>Mellemfolkeligt Samvirke oplevede et behov for en online læringsplatform til deres mange frivillige aktivister.</p>
+							<h3>En social læringsplatform</h3>
+							<p>Vi undersøgte markedet og valgte sammen med Mellemfolkeligt Samvirke at starte et open source projekt med fokus på simple opgaver (kaldet bits) der samlet udgør færdigheder (kaldet skills). Platformen har samtidig fokus på at brugerene kan dele deres erfaringer med det de lærer på platformen, således at de kan inspirere hinanden på tværs.</p>
+							<p class="centered">&middot; &middot; &middot;</p>
+						</a>
+					</div>
+					<div class="col-md-6 case" id="dka">
+						<a href="http://www.danskkulturarv.dk/" target="_blank">
+							<span class="image"></span>
+							<!--p class="small">Tilgængeliggørelse af 100.000+ kulturhistoriske materialer<br/>for DR Arkiv</p-->
+							<h3>Udfordringen</h3>
+							<p>DR Arkiv oplevede et behov for tilgængeliggørelsen af 100.000+ kulturhistoriske materialer fra 10+ samarbejdsinstitutioner.</p>
+							<h3>Et mobil-venligt website</h3>
+							<p>Fordi DR udtrykte et relativt stort behov for redaktionelt at kunne udvælge materialer og skrive uddybende tekster i produktet, valgte vi at basere udviklingen på et af de mest successfulde CMS systemer, nemlig open source systemet Wordpress. Til lagring af og søgning i materialerne benyttes open source collection management servicen CHAOS.</p>
+							<p class="centered">&middot; &middot; &middot;</p>
+						</a>
+					</div>
 				</div>
 				<div class="row">
-					<a class="col-md-6 case" id="airtame" href="http://airtame.com/" target="_blank">
-						<span class="image"></span>
-						<!--p class="small">Streaming enhed, der overfører billede og lyd<br/>for Airtame</p-->
-						<h3>Udfordringen</h3>
-						<p>Alle hader kabler og adaptere, de ligger hen af gulvet så folk falder i dem og man har ofte ikke den rigtige port i sin computer når den skal forbindes til en projektor eller et TV.</p>
-						<h3>En fysisk enhed der kan tilslutte computeren til TVet eller projektoren - trådløst!</h3>
-						<p>Oprindeligt var Airtame et forsknings og udviklings projekt i BIT BLUEPRINT, men det tog hurtigt fart og blev sit eget foretagende da det modtog over 1.26 mio. USD på Crowdfunding platformen Indiegogo. Vi har efterfølgende hjulpet Airtame med alt fra udvikling af kundevendte websites til implementering af udvidelser til Wireshark, så Airtames pakken kan forståes af udviklere når de flyver over netværket.</p>
-						<p class="centered">&middot; &middot; &middot;</p>
-					</a>
-					<a class="col-md-6 case" id="os-video" href="https://www.youtube.com/watch?v=a8fHgx9mE5U" target="_blank">
-						<span class="image"></span>
-						<!--p class="small">Stop-motion video der beskriver "Open Source"<br/>for hele verden!</p-->
-						<h3>Udfordringen</h3>
-						<p>Langt fra alle forstår fordelene ved brugen af open source teknologi. Med en forståelse af open source begrebet ville endnu flere kunne træffe valget om at offentliggøre under en fri licens.</p>
-						<h3>En video der forklarer baggrunden for og principperne i open source bevægelsen</h3>
-						<p>BIT BLUEPRINT, ønskede at give igen til fællesskabet ved at lave en stop-motion video der forklarer open source og principperne bag. Vi filmede videoen, med hjælp fra virksomheden Moving Monday, ved brug af LEGO&reg; figurer i en garage tæt ved vores kontorer. Nu er videoen den mest afspillede video om open source på YouTube og den ligger øverst med over 70.000 unikke afspilninger.</p>
-						<p class="centered">&middot; &middot; &middot;</p>
-					</a>
+					<div class="col-md-6 case" id="airtame">
+						<a href="http://airtame.com/" target="_blank">
+							<span class="image"></span>
+							<!--p class="small">Streaming enhed, der overfører billede og lyd<br/>for Airtame</p-->
+							<h3>Udfordringen</h3>
+							<p>Alle hader kabler og adaptere, de ligger hen af gulvet så folk falder i dem og man har ofte ikke den rigtige port i sin computer når den skal forbindes til en projektor eller et TV.</p>
+							<h3>En fysisk enhed der kan tilslutte computeren til TVet eller projektoren - trådløst!</h3>
+							<p>Oprindeligt var Airtame et forsknings og udviklings projekt i BIT BLUEPRINT, men det tog hurtigt fart og blev sit eget foretagende da det modtog over 1.26 mio. USD på Crowdfunding platformen Indiegogo. Vi har efterfølgende hjulpet Airtame med alt fra udvikling af kundevendte websites til implementering af udvidelser til Wireshark, så Airtames pakken kan forståes af udviklere når de flyver over netværket.</p>
+							<p class="centered">&middot; &middot; &middot;</p>
+						</a>
+					</div>
+					<div class="col-md-6 case" id="os-video">
+						<a href="https://www.youtube.com/watch?v=a8fHgx9mE5U" target="_blank">
+							<span class="image"></span>
+							<!--p class="small">Stop-motion video der beskriver "Open Source"<br/>for hele verden!</p-->
+							<h3>Udfordringen</h3>
+							<p>Langt fra alle forstår fordelene ved brugen af open source teknologi. Med en forståelse af open source begrebet ville endnu flere kunne træffe valget om at offentliggøre under en fri licens.</p>
+							<h3>En video der forklarer baggrunden for og principperne i open source bevægelsen</h3>
+							<p>BIT BLUEPRINT, ønskede at give igen til fællesskabet ved at lave en stop-motion video der forklarer open source og principperne bag. Vi filmede videoen, med hjælp fra virksomheden Moving Monday, ved brug af LEGO&reg; figurer i en garage tæt ved vores kontorer. Nu er videoen den mest afspillede video om open source på YouTube og den ligger øverst med over 70.000 unikke afspilninger.</p>
+							<p class="centered">&middot; &middot; &middot;</p>
+						</a>
+					</div>
 				</div>
 				<p>Læs og se mere om BIT BLUEPRINT på <a href="http://www.bitblueprint.com/" target="_blank">bitblueprint.com</a></p>
 				<p>Og har du spørgsmål, så kontakt os endelig på telefon +45 7199 3679, <a href="mailto:ch@bitblueprint.com">ch@bitblueprint.com</a> eller besøg os på <a href="https://www.google.dk/maps/preview?ie=UTF8&cid=5580099935076250734&q=BIT+BLUEPRINT&iwloc=A&gl=DK&hl=da">Vestergade 20C, 1. & 2. sal, 1456 København</a></p>

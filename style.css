@@ -3,14 +3,24 @@
 html {
 	position: relative;
 	min-height: 100%;
+	height:100%;
 }
 body {
+	min-height: 100%;
 	/* Margin bottom by footer height */
 	/*margin-bottom: 70px;*/
 	background-image: url(images/splash-bg.png);
 	background-repeat: no-repeat;
 	background-position: bottom right;
 	background-attachment: fixed;
+	/*-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;*/
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
 }
 .footer {
 	position: absolute;
@@ -116,6 +126,13 @@ ul {
 	margin-bottom: 15px;
 }
 
+.hack-bg {
+	/*background-image: url(images/hack-bg-blue.jpg);*/
+	background-image: url(images/hack-bg-grey.jpg);
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
 form#challenge .row input {
 	width: 100%;
 	margin-bottom: 0.5em;
@@ -126,6 +143,8 @@ form#challenge .row {
 }
 
 #desciption-length {
+	margin-top: 5px;
+	margin-bottom: 20px;
 	text-align: right;
 }
 
@@ -135,11 +154,13 @@ form#challenge .row {
 
 .blue-badge {
 	background-color: #214ed3;
-	padding: 0.3em 0;
+	padding: 0.3em;
 	font-size: 30px;
 	color: white;
 	text-align: center;
 	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 #thanks {
@@ -153,50 +174,45 @@ form#challenge .row {
 	margin-bottom: 20px;
 }
 
-a.case {
+.case a {
 	color: #F0F0F0;
 }
 
-a.case:hover {
+.case a:hover {
 	text-decoration: none;
 }
 
-a.case span.image {
+.case span.image {
 	display: block;	
 	height: 130px;
 	width: 100%;
 	background-size: cover;
 }
 
-a.case p.centered {
+.case p.centered {
 	text-align: center;
 }
 
-.row {
-	width: 100%;
-	margin: auto;
-}
-
-a.case#airtame span.image {
+.case#airtame span.image {
 	background-image: url(images/cases/airtame.png);
 }
 
-a.case#os-video span.image {
+.case#os-video span.image {
 	background-image: url(images/cases/os-video.png);
 }
 
-a.case#dka span.image {
+.case#dka span.image {
 	background-image: url(images/cases/dka.png);
 }
 
-a.case#gcl span.image {
+.case#gcl span.image {
 	background-image: url(images/cases/gcl.png);
 }
 
-a.case#vm-spil span.image {
+.case#vm-spil span.image {
 	background-image: url(images/cases/vm-spil.png);
 }
 
-a.case#rokoko span.image {
+.case#rokoko span.image {
 	background-image: url(images/cases/rokoko.jpg);
 }
