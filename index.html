@@ -34,13 +34,14 @@
 
 		<!-- Begin page content -->
 		<div class="container" id="competition">
-				<form id="challenge">
+				<form id="challenge" role="form">
 				<input name="entry.1467371391" id="hashtag-reference" type="hidden">
 				<div class="page-header">
 					<h1>Vind et hack!</h1>
 					<div class="row">
 						<div class="col-md-9">
-							<h2>Et hack er en 1 uges agilt sprint med fokus på udvikling af kerne funktionalitet.</h2>
+							<!--h2>Et hack er en 1 uges agilt sprint med fokus på udvikling af kerne funktionalitet.</h2-->
+							<h2>Vind én gratis uges udvikling af en funktionel prototype!</h2>
 						</div>
 						<div class="col-md-3">
 							<p class="blue-badge">Værdi 40.000kr</p>
@@ -51,22 +52,25 @@
 				<p class="lead">Indsend beskrivelsen af en udfordring I oplever internt i jeres organisation eller i forbindelse med jeres kunder og få muligheden for at vinde et hack!</p>
 				<p>Beskriv udfordringen I oplever - husk at holde det kortfattet og desuden at komme ind på følgende:
 					<ul>
-						<li>Hvem oplever denne udfordring? <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Så konkret som muligt - Er det fx Karsten fra IT? Er det kunder der ringer ind?"></span><!--small>Så konkret som muligt - Er det fx Karsten fra IT? Er det kunder der ringer ind?</small--></li>
-						<li>Hvor stor er udfordringen? <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Så konkret som muligt - Estimér hvor store udgifter I oplever, at udfordringen koster jer? (Manglende omsætning, spildte mandetimer, etc.)"></span><!--small>Så konkret som muligt - Estimér hvor store udgifter I oplever, at udfordringen koster jer? (Manglende omsætning, spildte mandetimer, etc.)</small--></li>
-						<li>Husk at det er en konkurrence! <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Motivér udfordringen - Det er den største og mest interessante udfordring, der vinder!"></span><!--small>Motivér udfordringen - Det er den største og mest interessante udfordring, der vinder!</small--></li>
+						<li><strong>Hvem oplever denne udfordring?</strong><br/><!--span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Så konkret som muligt - Er det fx Karsten fra IT? Er det kunder der ringer ind?"></span-->Så konkret som muligt - Er det fx Karsten fra IT? Er det kunder der ringer ind?</li>
+						<li><strong>Hvor stor er udfordringen?</strong><br/><!--span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Så konkret som muligt - Estimér hvor store udgifter I oplever, at udfordringen koster jer? (Manglende omsætning, spildte mandetimer, etc.)"></span-->Så konkret som muligt - Estimér hvor store udgifter I oplever, at udfordringen koster jer? (Manglende omsætning, spildte mandetimer, etc.)</li>
+						<li><strong>Husk at det er en konkurrence!</strong><br/><!--span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Motivér udfordringen - Det er den største og mest interessante udfordring, der vinder!"></span-->Motivér udfordringen - Det er den største og mest interessante udfordring, der vinder!</li>
 					</ul>
 				</p>
-				<p><textarea name="entry.1459181871" id="description" rows="6" placeholder="Vores udfordring ..."></textarea></p>
-				<p class="small" id="desciption-length">Du har <span>200</span> ord tilbage til at beskrive jeres udfordring.</p>
+				<div class="row">
+					<div class="col-md-12">
+						<textarea class="form-control" name="entry.1459181871" id="description" rows="6" placeholder="Vores udfordring ..."></textarea>
+						<p class="small" id="desciption-length">Du har <span>200</span> ord tilbage til at beskrive jeres udfordring.</p></div>
+				</div>
 
 				<p>Lidt information om jer</p>
 				<div class="row">
-					<div class="col-md-6"><input name="entry.214447454" id="orgname" placeholder="Hvad hedder jeres organisation?"></div>
-					<div class="col-md-6"><input name="entry.900240794" id="name" placeholder="Hvad hedder du?"></div>
+					<div class="col-md-6"><input name="entry.214447454" class="form-control" type="text" id="orgname" placeholder="Hvad hedder jeres organisation?"></div>
+					<div class="col-md-6"><input name="entry.900240794" class="form-control" type="text" id="name" placeholder="Hvad hedder du?"></div>
 				</div>
 				<div class="row">
-					<div class="col-md-6"><input name="entry.73572704" id="email" placeholder="Hvad er din e-mail?"></div>
-					<div class="col-md-6"><input name="entry.1410390889" id="phonenumber" placeholder="Hvad er dit telefonnummer?"></div>
+					<div class="col-md-6"><input name="entry.73572704" class="form-control" type="text" id="email" placeholder="Hvad er din e-mail?"></div>
+					<div class="col-md-6"><input name="entry.1410390889" class="form-control" type="text" id="phonenumber" placeholder="Hvad er dit telefonnummer?"></div>
 				</div>
 				<p>Informationen du giver os vil udelukkende bliver brugt internt til vores ingeniører og vil blive opbevaret fortroligt. Det er udelukkende dig, vi vil opsøge dialog med, såfremt vi har uddybende spørgsmål eller ønsker at overdrage premien.</p>
 				<div class="row">

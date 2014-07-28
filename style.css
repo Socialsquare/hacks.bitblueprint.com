@@ -77,6 +77,10 @@ h1, h2, h3, .lead, .blue-badge {
 	text-transform: uppercase;
 }
 
+input, textarea {
+	
+}
+
 .glyphicon {
 	color: #214ed3;
 }
@@ -103,6 +107,13 @@ p {
 .container form textarea {
 	width: 100%;
 	resize: vertical;
+}
+
+li {
+	margin-top: 15px;
+}
+ul {
+	margin-bottom: 15px;
 }
 
 form#challenge .row input {
