@@ -20,6 +20,12 @@
 		<!-- Custom styles for this template -->
 		<link href="style.css" rel="stylesheet">
 
+		<meta property="og:title" content="Konkurrence: Vind et hack!" />
+		<meta property="og:description" content="Et hack er en 1 uges agilt sprint med fokus på udvikling af kerne funktionalitet. (værdi 40.000)" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://hacks.bitblueprint.com/" />
+		<meta property="og:image" content="http://hacks.bitblueprint.com/images/logo.jpg" />
+
 	</head>
 
 	<body>
@@ -80,25 +86,45 @@
 			<div class="container">
 				<h1>Hvem er BIT BLUEPRINT?</h1>
 				<p>BIT BLUEPRINT er et åbent agilt udviklingshus med fokus på udvikling af digitale produkter og services, der er drevet af fællesskaber.</p>
-				<p>Ingeniørerne i BIT BLUEPRINT har blandt andet været medvirkende i udviklingen af:</p>
+				<p>Ingeniørerne i BIT BLUEPRINT er meget tværfaglige og har blandt andet designet og udviklet på løsninger til disse udfordringer:</p>
 				<div class="row">
 					<a class="col-md-6 case" id="rokoko" href="http://rokoko.co/" target="_blank">
 						<span class="image"></span>
-						<p class="small">Hardware og software til opsamling af 3D bevægelser,<br/>for ROKOKO Electronics</p>
+						<!--p class="small">Hardware og software til opsamling af 3D bevægelser,<br/>for ROKOKO Electronics</p-->
+						<h3>Udfordringen</h3>
+						<p>ROKOKO Electronics oplevede et behov for en langt billigere løsning til at opsamle 3D bevægelser, når de lavede realtids animations teater til børn for blandt andre Tivoli.</p>
+						<h3>En digital løsning i hardware & software</h3>
+						<p>I samarbejde med ROKOKO's animatører leverer vi en kedeldragt med accelerometre på samtlige led af kroppen, der leverer den relevante data til Unity 3D ved brug af open source komponenter som Arduino, Raspberry Pi og UDOO boards. Da ROKOKO ønsker at biddrage tilbage til fællesskabet, offentliggøres kildekode der udvikles i projektet, under en open source licens.</p>
+						<p class="centered">&middot; &middot; &middot;</p>
 					</a>
 					<a class="col-md-6 case" id="vm-spil" href="http://www.dr.dk/sporten/fifavm2014/quiz" target="_blank">
 						<span class="image"></span>
-						<p class="small">Spiludvikling af årets FIFA VM Quiz,<br/>for DR Medier</p>
+						<!--p class="small">Spiludvikling af årets FIFA VM Quiz,<br/>for DR Medier</p-->
+						<h3>Udfordringen</h3>
+						<p>DR Medier oplevede et behov for en interaktiv og underholdende quiz i forbindelse med deres dækning af VM i fodbold i Brasilien.</p>
+						<h3>Et mobil-orienteret website</h3>
+						<p>Vi genbrugte en teknisk løsning fra et eksisterende open source projekt til at skabe en realtids lyd-quiz, hvor lytteren på tid skulle gætte målchancer blot ved at lytte. Teknologien var en mobil-venlig web applikation skrevet i Node.js realtids frameworket Meteor. Dette projekt kunne kun lade sig gøre indenfor de givne resourcer fordi vi benyttede et eksisterende open source projekt ovenpå et eksisterende open source framework.</p>
+						<p class="centered">&middot; &middot; &middot;</p>
 					</a>
 				</div>
 				<div class="row">
 					<a class="col-md-6 case" id="gcl" href="http://www.globalchangelab.org/" target="_blank">
 						<span class="image"></span>
-						<p class="small">Læringsplatform, Global Change Lab,<br/>for Mellemfolkeligt Samvirke</p>
+						<!--p class="small">Læringsplatform, Global Change Lab,<br/>for Mellemfolkeligt Samvirke</p-->
+						<h3>Udfordringen</h3>
+						<p>Mellemfolkeligt Samvirke oplevede et behov for en online træningsplatform til deres mange frivillige aktivister.</p>
+						<h3>En e-lærings platform</h3>
+						<p>Vi undersøgte markedet og valgte sammen med Mellemfolkeligt Samvirke at starte et open source projekt med fokus på simple opgaver (kaldet bits) der samlet udgør færdigheder (kaldet skills). Platformen har samtidig fokus på at brugerene kan dele deres erfaringer med det de lærer på platformen, således at de kan inspirere hinanden på tværs.</p>
+						<p class="centered">&middot; &middot; &middot;</p>
 					</a>
 					<a class="col-md-6 case" id="dka" href="http://www.danskkulturarv.dk/" target="_blank">
 						<span class="image"></span>
-						<p class="small">Tilgængeliggørelse af 100.000+ kulturhistoriske materialer<br/>for DR Arkiv</p>
+						<!--p class="small">Tilgængeliggørelse af 100.000+ kulturhistoriske materialer<br/>for DR Arkiv</p-->
+						<h3>Udfordringen</h3>
+						<p>DR Arkiv oplevede et behov for tilgængeliggørelsen af 100.000+ kulturhistoriske materialer fra 10+ samarbejdsinstitutioner.</p>
+						<h3>Et mobil-venligt website</h3>
+						<p>Fordi DR udtrykte et relativt stort behov for redaktionelt at kunne udvælge materialer og skrive uddybende tekster i produktet, valgte vi at basere udviklingen på et af de mest successfulde CMS systemer, nemlig open source systemet Wordpress. Til lagring af og søgning i materialerne benyttes open source collection management servicen CHAOS.</p>
+						<p class="centered">&middot; &middot; &middot;</p>
 					</a>
 				</div>
 				<div class="row">

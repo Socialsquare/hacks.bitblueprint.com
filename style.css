@@ -72,7 +72,7 @@ body {
 	font-family: 'DIN';
 }
 
-h1, h2, .lead, .blue-badge {
+h1, h2, h3, .lead, .blue-badge {
 	font-family: 'DIN UltraLight';
 	text-transform: uppercase;
 }
@@ -138,9 +138,16 @@ form#challenge .row {
 	display: none;
 }
 
+.footer .row {
+	margin-bottom: 20px;
+}
+
 a.case {
-	text-align: right;
 	color: #F0F0F0;
+}
+
+a.case:hover {
+	text-decoration: none;
 }
 
 a.case span.image {
@@ -148,6 +155,10 @@ a.case span.image {
 	height: 130px;
 	width: 100%;
 	background-size: cover;
+}
+
+a.case p.centered {
+	text-align: center;
 }
 
 .row {
