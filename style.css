@@ -1,0 +1,161 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	/* Margin bottom by footer height */
+	/*margin-bottom: 70px;*/
+	background-image: url(images/splash-bg.png);
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-attachment: fixed;
+}
+.footer {
+	position: absolute;
+	/*bottom: 0;*/
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	/*height: 70px;*/
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #F0F0F0;
+	margin-top: 20px;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+@font-face {
+	font-family: 'DIN';
+	font-style: normal;
+	font-weight: 400;
+	/*src: local('DIN Next LT Pro Regular'), url(fonts/DINNextLTPro-Regular.otf);*/
+	src: url(fonts/DINNextLTPro-Regular.otf);
+}
+@font-face {
+	font-family: 'DIN';
+	font-style: italic;
+	font-weight: 400;
+	src: url(fonts/DINNextLTPro-Italic.otf);
+}
+
+@font-face {
+	font-family: 'DIN Light';
+	font-style: normal;
+	font-weight: 400;
+	src: url(fonts/DINNextLTPro-Light.otf);
+}
+@font-face {
+	font-family: 'DIN Light';
+	font-style: italic;
+	font-weight: 400;
+	src: url(fonts/DINNextLTPro-LightItalic.otf);
+}
+
+@font-face {
+	font-family: 'DIN UltraLight';
+	font-style: normal;
+	font-weight: 400;
+	src: url(fonts/DINNextLTPro-UltraLight.otf);
+}
+@font-face {
+	font-family: 'DIN UltraLight';
+	font-style: italic;
+	font-weight: 400;
+	src: url(fonts/DINNextLTPro-UltraLightIt.otf);
+}
+
+* {
+	font-family: 'DIN';
+}
+
+label {
+	font-weight: initial;
+}
+
+.container {
+	position: relative;
+	width: auto;
+	max-width: 720px;
+	padding: 0 15px;
+}
+
+p {
+	text-align: justify;
+}
+
+.container .text-muted {
+	margin: 20px 0;
+}
+
+.container form textarea {
+	width: 100%;
+	resize: vertical;
+}
+
+form#challenge .row input {
+	width: 100%;
+}
+
+form#challenge .row {
+	margin-bottom: 20px;
+}
+
+#desciption-length {
+	text-align: right;
+}
+
+#desciption-length.too-long {
+	color: red;
+}
+
+#thanks {
+	position: absolute;
+	top: 0;
+	padding-top: 33%;
+	display: none;
+}
+
+a.case {
+	text-align: right;
+	color: #F0F0F0;
+}
+
+a.case span.image {
+	display: block;	
+	height: 130px;
+	width: 100%;
+	background-size: cover;
+}
+
+.row {
+	width: 100%;
+	margin: auto;
+}
+
+a.case#airtame span.image {
+	background-image: url(images/cases/airtame.png);
+}
+
+a.case#os-video span.image {
+	background-image: url(images/cases/os-video.png);
+}
+
+a.case#dka span.image {
+	background-image: url(images/cases/dka.png);
+}
+
+a.case#gcl span.image {
+	background-image: url(images/cases/gcl.png);
+}
+
+a.case#vm-spil span.image {
+	background-image: url(images/cases/vm-spil.png);
+}
+
+a.case#rokoko span.image {
+	background-image: url(images/cases/rokoko.jpg);
+}
