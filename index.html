@@ -27,6 +27,7 @@
 		<!-- Begin page content -->
 		<div class="container" id="competition">
 				<form id="challenge">
+				<input name="entry.1467371391" id="hashtag-reference" type="hidden">
 				<div class="page-header">
 					<h1>Vind et hack!</h1>
 					<h2>Et hack er en 1 uges udviklingssprint med fokus på kerne funktionalitet (værdi 40.000 DKK)</h2>
@@ -41,19 +42,19 @@
 						<li>Husk at det er en konkurrence! <small>Motivér udfordringen - Det er den største og mest interessante udfordring der vinder!</small></li>
 					</ul>
 				</p></label>
-				<p><textarea id="description" rows="6" placeholder="Vores udfordring ..."></textarea></p>
+				<p><textarea name="entry.1459181871" id="description" rows="6" placeholder="Vores udfordring ..."></textarea></p>
 				<p class="small" id="desciption-length">Du har <span>200</span> ord tilbage til at beskrive jeres udfordring.</p>
 
 				<label for="orgname"><p>
 					Lidt information om jer
 				</p></label>
 				<div class="row">
-					<div class="col-md-6"><input id="orgname" placeholder="Hvad hedder jeres organisation?"></div>
-					<div class="col-md-6"><input id="name" placeholder="Hvad hedder du?"></div>
+					<div class="col-md-6"><input name="entry.214447454" id="orgname" placeholder="Hvad hedder jeres organisation?"></div>
+					<div class="col-md-6"><input name="entry.900240794" id="name" placeholder="Hvad hedder du?"></div>
 				</div>
 				<div class="row">
-					<div class="col-md-6"><input id="email" placeholder="Hvad er din e-mail?"></div>
-					<div class="col-md-6"><input id="phonenumber" placeholder="Hvad er dit telefonnummer?"></div>
+					<div class="col-md-6"><input name="entry.73572704" id="email" placeholder="Hvad er din e-mail?"></div>
+					<div class="col-md-6"><input name="entry.1410390889" id="phonenumber" placeholder="Hvad er dit telefonnummer?"></div>
 				</div>
 				<p>Informationen du giver os, vil udelukkende bliver brugt internt til vores ingeniører og vil blive opbevaret fortroligt. Det er udelukkende dig, vi vil opsøge dialog med, såfremt vi har uddybende spørgsmål eller ønsker at overdrage premien.</p>
 				<div class="row">
@@ -118,6 +119,7 @@
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<script>
 		var MAX_DESCRIPTION_WORDS = 200;
+		var RESPONSE_URL = 'https://docs.google.com/a/bitblueprint.com/forms/d/1k64Z_tjlDcUy2svG8fNNWt9scM1C38M4Vwrhu_4TfCU/formResponse';
 
 		function count_words(text) {
 			var normalizedWhitespaces = text.replace(/\s+/g, " ");
@@ -175,6 +177,20 @@
 			}
 		}
 
+		function submit_data($form, succes_callback) {
+			var values = $form.serializeArray();
+			var data = {};
+			for (var v in values) {
+				data[values[v].name] = values[v].value;
+			}
+			$.ajax({
+				url: RESPONSE_URL,
+				method: 'POST',
+				data: data,
+				complete: succes_callback
+			});
+		}
+
 		$(function() {
 			$("#description").on('keyup', function(e) {
 				var wordCount = count_words( $(this).val() );
@@ -185,14 +201,19 @@
 					$("#desciption-length").removeClass("too-long");
 				}
 			});
-			$("#challenge").submit(function(e){
+			$("#challenge").submit( function(e){
 				e.preventDefault();
-				var valid_form = validate_form( $(this) );
+				var $form = $(this);
+				// Copy over the location.hash.
+				$form.find('#hashtag-reference').val(location.hash);				
+				var valid_form = validate_form( $form );
 				if(valid_form === true) {
-					$("#challenge").animate({
-						opacity: 0.1
+					submit_data($form, function() {
+						$("#challenge").animate({
+							opacity: 0.1
+						});
+						$("#thanks").show();
 					});
-					$("#thanks").show();
 				} else {
 					for(e in errors) {
 						var error = errors[e];
@@ -205,7 +226,7 @@
 						});
 					}
 				}
-			});
+			} );
 		});
 		</script>
 	</body>
