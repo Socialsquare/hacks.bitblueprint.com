@@ -77,6 +77,10 @@ h1, h2, .lead, .blue-badge {
 	text-transform: uppercase;
 }
 
+.glyphicon {
+	color: #214ed3;
+}
+
 label {
 	font-weight: initial;
 }
