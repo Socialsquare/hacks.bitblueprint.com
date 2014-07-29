@@ -34,7 +34,7 @@
 		<div class="background"></div>
 		<!-- Begin page content -->
 		<div class="container" id="competition">
-				<form id="challenge" role="form">
+				<form id="challenge">
 				<input name="entry.1467371391" id="hashtag-reference" type="hidden">
 				<div class="page-header">
 					<h1>Vind et hack!</h1>
@@ -230,6 +230,7 @@
 					$element: $phonenumber
 				});
 			}
+			return errors;
 		}
 
 		function submit_data($form, succes_callback) {
@@ -263,8 +264,8 @@
 				var $form = $(this);
 				// Copy over the location.hash.
 				$form.find('#hashtag-reference').val(location.hash);				
-				var valid_form = validate_form( $form );
-				if(valid_form === true) {
+				var form_errors = validate_form( $form );
+				if(form_errors.length === 0) {
 					submit_data($form, function() {
 						$("#challenge").animate({
 							opacity: 0.1
@@ -272,8 +273,8 @@
 						$("#thanks").show();
 					});
 				} else {
-					for(e in errors) {
-						var error = errors[e];
+					for(e in form_errors) {
+						var error = form_errors[e];
 						error.$element.popover({
 							content: error.text,
 							trigger: 'manual',
