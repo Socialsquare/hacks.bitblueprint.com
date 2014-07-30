@@ -77,16 +77,22 @@
 						<li><strong>Hvor stor er udfordringen?</strong><br/><!--span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Så konkret som muligt - Estimér hvor store udgifter I oplever, at udfordringen koster jer? (Manglende omsætning, spildte mandetimer, etc.)"></span-->Så konkret som muligt - Estimér hvor store udgifter I oplever, at udfordringen koster jer? (Manglende omsætning, spildte mandetimer, etc.)</li>
 						<li><strong>Husk at det er en konkurrence!</strong><br/><!--span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Motivér udfordringen - Det er den største og mest interessante udfordring, der vinder!"></span-->Motivér udfordringen - Det er den største og mest interessante udfordring, der vinder!</li>
 					</ul>
-					<div class="btn-group">
-						<button type="button" class="btn btn-default active" id="has-challenge-btn">Jeg har en udfordring i tankerne</button>
-						<button type="button" class="btn btn-default" id="needs-time-btn">Jeg bliver nødt til at tænke lidt over en udfordring</button>
+					<p class="lead" style="margin-bottom:0;">Er du klar til at indsende en udfordring?</p>
+					<!--div class="btn-group">
+						<button type="button" class="btn btn-default active" id="has-challenge-btn">Ja!</button>
+						<button type="button" class="btn btn-default" id="needs-time-btn">Nej - jeg skal tænke lidt</button>
+					</div-->
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" id="has-challenge-checkbox" checked> Ja - Jeg har allerede en udfordring i tankerne
+						</label>
 					</div>
 				</p>
 				<div id="description-wrapper">
 					<textarea class="form-control" name="entry.1459181871" id="description" rows="6" placeholder="Vores udfordring ..."></textarea>
 					<p class="small" id="description-length">Du har <span>200</span> ord tilbage til at beskrive jeres udfordring.</p>
 					<div id="no-challenge-yet">
-						<h3>Hvis du blot udfylder og indsender dine kontaktoplysninger vil vi kontakte dig når vi kommer tættere på deadline.</h3>
+						<h3>Vi kontakter dig når konkurrencens deadline nærmer sig, hvis du indsender dine kontaktoplysninger.</h3>
 						<span class="glyphicon glyphicon-chevron-down"></span>
 					</div>
 				</div>
@@ -103,7 +109,7 @@
 				<p>Informationen du giver os vil udelukkende blive brugt internt af vores ingeniører og vil blive opbevaret fortroligt. Det er udelukkende dig, vi vil opsøge dialog med, såfremt vi har uddybende spørgsmål eller ønsker at overdrage premien.</p>
 				<div class="row">
 					<div class="col-md-12">
-						<input class="btn btn-default" type="submit" value="Indsend udfordringen!">
+						<input class="btn btn-default" id="submit-btn" type="submit" value="Indsend udfordringen!">
 					</div>
 				</div>
 			</form>
@@ -329,16 +335,16 @@
 					}
 				}
 			} );
-			$("#needs-time-btn").click(function() {
-				$(this).addClass('active');
-				$("#has-challenge-btn").removeClass('active');
-				$("#description-wrapper").addClass('needs-time');
-				$("#description").val("Vores udfordring er at vi skal finde en udfordring - kontakt mig når deadlinen nærmer sig.");
-			});
-			$("#has-challenge-btn").click(function() {
-				$(this).addClass('active');
-				$("#needs-time-btn").removeClass('active');
-				$("#description-wrapper").removeClass('needs-time');
+			$("#has-challenge-checkbox").change(function() {
+				if($(this).is(':checked')) {
+					$("#description-wrapper").removeClass('needs-time');
+					$("#description").val("");
+					$("#submit-btn").val("Indsend udfordringen!");
+				} else {
+					$("#description-wrapper").addClass('needs-time');
+					$("#description").val("Vores udfordring er at vi skal finde en udfordring - kontakt mig når deadlinen nærmer sig.");
+					$("#submit-btn").val("Indsend kontaktoplysninger!");
+				}
 			});
 		});
 		</script>

@@ -192,10 +192,6 @@ form#challenge .row input {
 	text-align: center;
 }
 
-#no-challenge-yet .glyphicon {
-	margin-top: 20px;
-}
-
 #description-wrapper.needs-time #no-challenge-yet {
 	display: block;
 }
