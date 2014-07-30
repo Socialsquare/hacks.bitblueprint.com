@@ -47,7 +47,28 @@
 							<p class="blue-badge">Værdi 40.000kr</p>
 						</div>
 					</div>
-					<p>Du får svar på, om vi arbejder videre med jeres udfordring senest d. 18. august 2014 og en løsning præsenteres for jer i starten af september 2014.</p>
+					<h3>Deadline 18. august</h3>
+					<div class="row">
+						<div class="col-md-8">
+							<p>Vi skal modtage din udfordring senest den 18. august 2014 og du får svar på, om vi arbejder videre med netop jeres udfordring senest d. 22. august 2014. Herefter vil en løsning blive præsenteret for jer i starten af september 2014.</p>
+						</div>
+						<div class="col-md-4">
+							<p style="text-align:center;">
+								<a href="http://hacks.bitblueprint.com/" title="Tilføj deadline til kalender" class="addthisevent">
+									Tilføj til kalender
+									<span class="_start">18-08-2014 12:00:00</span>
+									<span class="_end">18-08-2014 13:00:00</span>
+									<span class="_zonecode">40</span>
+									<span class="_summary">Deadline for "Vind et hack!"</span>
+									<span class="_description">Deadline for BIT BLUEPRINT's konkurrence om at vinde en uges udvikling af en funktionel digital prototype: http://hacks.bitblueprint.com/</span>
+									<span class="_organizer">BIT BLUEPRINT</span>
+									<span class="_organizer_email">hello@bitblueprint.com</span>
+									<span class="_all_day_event">true</span>
+									<span class="_date_format">DD/MM/YYYY</span>
+								</a>
+							</p>
+						</div>
+					</div>
 				</div>
 				<p class="lead">Indsend beskrivelsen af en udfordring I oplever internt i jeres organisation eller i forbindelse med jeres kunder og få muligheden for at vinde et hack!</p>
 				<p>Beskriv udfordringen I oplever - husk at holde det kortfattet og desuden at komme ind på følgende:
@@ -56,11 +77,21 @@
 						<li><strong>Hvor stor er udfordringen?</strong><br/><!--span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Så konkret som muligt - Estimér hvor store udgifter I oplever, at udfordringen koster jer? (Manglende omsætning, spildte mandetimer, etc.)"></span-->Så konkret som muligt - Estimér hvor store udgifter I oplever, at udfordringen koster jer? (Manglende omsætning, spildte mandetimer, etc.)</li>
 						<li><strong>Husk at det er en konkurrence!</strong><br/><!--span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Motivér udfordringen - Det er den største og mest interessante udfordring, der vinder!"></span-->Motivér udfordringen - Det er den største og mest interessante udfordring, der vinder!</li>
 					</ul>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default active" id="has-challenge-btn">Jeg har en udfordring i tankerne</button>
+						<button type="button" class="btn btn-default" id="needs-time-btn">Jeg bliver nødt til at tænke lidt over en udfordring</button>
+					</div>
 				</p>
-				<textarea class="form-control" name="entry.1459181871" id="description" rows="6" placeholder="Vores udfordring ..."></textarea>
-				<p class="small" id="desciption-length">Du har <span>200</span> ord tilbage til at beskrive jeres udfordring.</p>
+				<div id="description-wrapper">
+					<textarea class="form-control" name="entry.1459181871" id="description" rows="6" placeholder="Vores udfordring ..."></textarea>
+					<p class="small" id="description-length">Du har <span>200</span> ord tilbage til at beskrive jeres udfordring.</p>
+					<div id="no-challenge-yet">
+						<h3>Hvis du blot udfylder og indsender dine kontaktoplysninger vil vi kontakte dig når vi kommer tættere på deadline.</h3>
+						<span class="glyphicon glyphicon-chevron-down"></span>
+					</div>
+				</div>
 
-				<p>Lidt information om jer</p>
+				<p>Lidt kontakt information om jer</p>
 				<div class="row">
 					<div class="col-md-6"><input name="entry.214447454" class="form-control" type="text" id="orgname" placeholder="Hvad hedder jeres organisation?"></div>
 					<div class="col-md-6"><input name="entry.900240794" class="form-control" type="text" id="name" placeholder="Hvad hedder du?"></div>
@@ -172,6 +203,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<!-- AddThisEvent -->
+		<script type="text/javascript" src="http://js.addthisevent.com/atemay.js"></script>
 
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -263,11 +296,11 @@
 			
 			$("#description").on('keyup', function(e) {
 				var wordCount = count_words( $(this).val() );
-				$("#desciption-length span").text(MAX_DESCRIPTION_WORDS - wordCount);
+				$("#description-length span").text(MAX_DESCRIPTION_WORDS - wordCount);
 				if(wordCount > MAX_DESCRIPTION_WORDS) {
-					$("#desciption-length").addClass("too-long");
+					$("#description-length").addClass("too-long");
 				} else {
-					$("#desciption-length").removeClass("too-long");
+					$("#description-length").removeClass("too-long");
 				}
 			});
 			$("#challenge").submit( function(e){
@@ -279,7 +312,7 @@
 				if(form_errors.length === 0) {
 					submit_data($form, function() {
 						$("#challenge").animate({
-							opacity: 0.1
+							opacity: 0.2
 						});
 						$("#thanks").show();
 					});
@@ -296,6 +329,17 @@
 					}
 				}
 			} );
+			$("#needs-time-btn").click(function() {
+				$(this).addClass('active');
+				$("#has-challenge-btn").removeClass('active');
+				$("#description-wrapper").addClass('needs-time');
+				$("#description").val("Vores udfordring er at vi skal finde en udfordring - kontakt mig når deadlinen nærmer sig.");
+			});
+			$("#has-challenge-btn").click(function() {
+				$(this).addClass('active');
+				$("#needs-time-btn").removeClass('active');
+				$("#description-wrapper").removeClass('needs-time');
+			});
 		});
 		</script>
 	</body>

@@ -153,13 +153,13 @@ form#challenge .row input {
 	margin-bottom: 20px;
 }*/
 
-#desciption-length {
+#description-length {
 	margin-top: 5px;
 	margin-bottom: 20px;
 	text-align: right;
 }
 
-#desciption-length.too-long {
+#description-length.too-long {
 	color: red;
 }
 
@@ -179,6 +179,33 @@ form#challenge .row input {
 	top: 0;
 	padding-top: 33%;
 	display: none;
+}
+
+#description-wrapper {
+	position: relative;
+}
+
+#no-challenge-yet {
+	position: absolute;
+	top: 0;
+	display: none;
+	text-align: center;
+}
+
+#no-challenge-yet .glyphicon {
+	margin-top: 20px;
+}
+
+#description-wrapper.needs-time #no-challenge-yet {
+	display: block;
+}
+
+#description-wrapper.needs-time #description {
+	opacity: 0.3;
+}
+
+#description-wrapper.needs-time #description-length {
+	opacity: 0.3;
 }
 
 .footer .case {
