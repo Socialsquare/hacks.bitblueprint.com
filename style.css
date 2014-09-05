@@ -107,7 +107,6 @@ label {
 }
 
 .container {
-	position: relative;
 	width: auto;
 	max-width: 720px;
 	padding: 0 15px;
@@ -153,6 +152,10 @@ form#challenge .row input {
 	margin-bottom: 20px;
 }*/
 
+#inputs-container {
+	position: relative;
+}
+
 #description-length {
 	margin-top: 5px;
 	margin-bottom: 20px;
@@ -174,11 +177,11 @@ form#challenge .row input {
 	margin-bottom: 10px;
 }
 
-#thanks {
+#thanks, #due-deadline {
 	position: absolute;
 	top: 0;
-	padding-top: 33%;
 	display: none;
+	z-index: 2;
 }
 
 #description-wrapper {
